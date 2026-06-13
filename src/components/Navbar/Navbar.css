@@ -1,0 +1,264 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.navbar-scrolled {
+  box-shadow: var(--shadow-md);
+}
+.logo-image{
+  width: 80px;
+  height: 80px;
+  background-image: url(../../assets/ChatGPT\ Image\ Jun\ 13\,\ 2026\,\ 11_52_01\ AM.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.navbar-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger-line {
+  width: 22px;
+  height: 2px;
+  background: var(--text-dark);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo i {
+  font-size: 28px;
+  color: var(--primary);
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo-highlight {
+  color: var(--primary);
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-categories {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-link {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-gray);
+  border-radius: 50px;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--bg-soft);
+  border-radius: 50px;
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.search-wrapper.search-active {
+  border-color: var(--primary);
+  background: white;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font);
+  font-size: 14px;
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.search-active .search-input {
+  width: 200px;
+  padding: 10px 0 10px 16px;
+  opacity: 1;
+}
+
+.search-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+  color: var(--text-gray);
+  transition: var(--transition);
+  font-size: 16px;
+}
+
+.search-btn:hover {
+  color: var(--primary);
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+  color: var(--text-gray);
+  transition: var(--transition);
+  font-size: 18px;
+  position: relative;
+}
+
+.icon-btn:hover {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: var(--danger);
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+@media (max-width: 992px) {
+  .nav-categories {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-center.mobile-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    background: white;
+    z-index: 1002;
+    padding: 80px 20px 20px;
+    box-shadow: var(--shadow-xl);
+    display: block;
+    animation: fadeInLeft 0.3s ease;
+  }
+
+  .navbar-center.mobile-active .nav-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .navbar-center.mobile-active .nav-link {
+    padding: 14px 16px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  .mobile-overlay {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-input {
+    display: none;
+  }
+
+  .search-wrapper.search-active .search-input {
+    display: block;
+    width: 140px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+}

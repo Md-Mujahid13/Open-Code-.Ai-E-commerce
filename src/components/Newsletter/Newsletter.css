@@ -1,0 +1,115 @@
+.newsletter {
+  background: linear-gradient(135deg, var(--primary-dark), #1B5E20);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(255,255,255,0.03) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.newsletter-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.newsletter-icon i {
+  font-size: 30px;
+}
+
+.newsletter-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.newsletter-content p {
+  font-size: 15px;
+  opacity: 0.85;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.newsletter-input-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  padding: 0 20px;
+  gap: 12px;
+}
+
+.newsletter-input-wrap i {
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 16px 0;
+  border: none;
+  outline: none;
+  font-family: var(--font);
+  font-size: 14px;
+}
+
+.newsletter-btn {
+  padding: 16px 32px;
+  background: var(--text-dark);
+}
+
+.newsletter-btn:hover {
+  background: #111827;
+}
+
+.newsletter-note {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+@media (max-width: 576px) {
+  .newsletter {
+    padding: 50px 0;
+  }
+
+  .newsletter-content h2 {
+    font-size: 24px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
