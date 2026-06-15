@@ -113,3 +113,17 @@
     justify-content: center;
   }
 }
+
+@media (min-width: 1600px) {
+  .newsletter-content {
+    max-width: 800px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 38px;
+  }
+
+  .newsletter {
+    padding: 100px 0;
+  }
+}

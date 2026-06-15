@@ -44,3 +44,19 @@
     max-width: 160px;
   }
 }
+
+@media (min-width: 1600px) {
+  .product-grid {
+    gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .centered-section .grid-centered {
+    gap: 32px;
+  }
+
+  .centered-section .grid-centered > * {
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+}

@@ -10,21 +10,15 @@ const Categories = () => {
           <h2>Shop by Category</h2>
           <p>Explore our wide range of premium dry fruits and natural products</p>
         </div>
-        <div className="categories-grid">
+      </div>
+      <div className="categories-scroll">
+        <div className="categories-row">
           {categories.slice(0, 8).map((cat, idx) => (
-            <div key={idx} className="category-card">
-              <div className="category-image">
-                <img
-                  src={cat.image}
-                  alt={cat.name}
-                  className="category-img"
-                  loading="lazy"
-                />
+            <div key={idx} className="category-item">
+              <div className="category-circle">
+                <img src={cat.image} alt={cat.name} className="category-circle-img" loading="lazy" />
               </div>
-              <div className="category-info">
-                <h3>{cat.name}</h3>
-                <span className="category-count">{cat.count} Products</span>
-              </div>
+              <span className="category-label">{cat.name}</span>
             </div>
           ))}
         </div>

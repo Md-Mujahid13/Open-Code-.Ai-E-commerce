@@ -73,7 +73,7 @@ const Footer = () => {
                 <span>123 MG Road, Indiranagar, Bangalore - 560038</span>
               </div>
               <div className="contact-item">
-                <i className="fas fa-phone-alt"></i>
+                <i className="fas fa-phone"></i>
                 <span>+91 1800-123-4567</span>
               </div>
               <div className="contact-item">
@@ -94,12 +94,12 @@ const Footer = () => {
           <div className="footer-middle-content">
             <div className="payment-methods">
               <span>We Accept:</span>
-              <i className="fab fa-cc-visa"></i>
-              <i className="fab fa-cc-mastercard"></i>
-              <i className="fab fa-cc-amex"></i>
-              <i className="fab fa-cc-upi"></i>
-              <i className="fab fa-google-pay"></i>
-              <i className="fab fa-paypal"></i>
+              <span className="payment-card"><i className="fab fa-cc-visa"></i></span>
+              <span className="payment-card"><i className="fab fa-cc-mastercard"></i></span>
+              <span className="payment-card"><i className="fab fa-cc-amex"></i></span>
+              <span className="payment-card"><i className="fab fa-cc-upi"></i></span>
+              <span className="payment-card"><i className="fab fa-google-pay"></i></span>
+              <span className="payment-card"><i className="fab fa-paypal"></i></span>
             </div>
             <div className="footer-badges">
               <span><i className="fas fa-shield-alt"></i> Secure Checkout</span>

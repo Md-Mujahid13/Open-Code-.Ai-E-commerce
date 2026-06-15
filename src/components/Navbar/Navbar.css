@@ -10,10 +10,11 @@
 .navbar-scrolled {
   box-shadow: var(--shadow-md);
 }
-.logo-image{
+
+.logo-image {
   width: 80px;
   height: 80px;
-  background-image: url(../../assets/ChatGPT\ Image\ Jun\ 13\,\ 2026\,\ 11_52_01\ AM.png);
+  background-image: url(../../assets/global-logo.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -69,21 +70,6 @@
   gap: 10px;
 }
 
-.logo i {
-  font-size: 28px;
-  color: var(--primary);
-}
-
-.logo-text {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.logo-highlight {
-  color: var(--primary);
-}
-
 .navbar-center {
   flex: 1;
   display: flex;
@@ -92,22 +78,110 @@
 
 .nav-categories {
   display: flex;
-  gap: 4px;
+  gap: 0;
+}
+
+.nav-item {
+  position: relative;
 }
 
 .nav-link {
-  padding: 8px 14px;
+  display: inline-block;
+  padding: 10px 16px;
   font-size: 13px;
   font-weight: 500;
   color: var(--text-gray);
-  border-radius: 50px;
-  transition: var(--transition);
+  position: relative;
   white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-item-active .nav-link {
   color: var(--primary);
-  background: var(--primary-light);
+}
+
+.nav-item-active .nav-link::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Mega Menu */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  min-width: 600px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  z-index: 1001;
+  pointer-events: none;
+  border: 1px solid var(--border-light);
+}
+
+.mega-menu.mega-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(4px);
+  pointer-events: auto;
+}
+
+.mega-menu-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 16px;
+}
+
+.mega-col {
+  padding: 4px 8px;
+}
+
+.mega-heading {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.mega-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mega-link {
+  font-size: 13px;
+  color: var(--text-gray);
+  padding: 4px 0;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: block;
+}
+
+.mega-link:hover {
+  color: var(--primary);
+  padding-left: 4px;
 }
 
 .navbar-right {
@@ -177,11 +251,30 @@
   transition: var(--transition);
   font-size: 18px;
   position: relative;
+  text-decoration: none;
 }
 
 .icon-btn:hover {
   color: var(--primary);
   background: var(--primary-light);
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-greeting {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.user-greeting.user-guest {
+  color: var(--text-light);
+  font-weight: 400;
 }
 
 .badge {
@@ -204,7 +297,7 @@
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
@@ -237,10 +330,22 @@
     gap: 0;
   }
 
+  .navbar-center.mobile-active .nav-item {
+    display: block;
+  }
+
   .navbar-center.mobile-active .nav-link {
     padding: 14px 16px;
     font-size: 15px;
     border-radius: 8px;
+  }
+
+  .navbar-center.mobile-active .nav-link::after {
+    display: none;
+  }
+
+  .navbar-center.mobile-active .mega-menu {
+    display: none;
   }
 
   .mobile-overlay {
@@ -258,7 +363,30 @@
     width: 140px;
   }
 
-  .logo-text {
-    font-size: 20px;
+  .navbar-container {
+    padding: 0 12px;
+    height: 64px;
+  }
+
+  .logo-image {
+    width: 56px;
+    height: 56px;
+  }
+
+  .navbar-right {
+    gap: 4px;
+  }
+
+  .icon-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .navbar-container {
+    max-width: 1560px;
+    padding: 0 40px;
   }
 }

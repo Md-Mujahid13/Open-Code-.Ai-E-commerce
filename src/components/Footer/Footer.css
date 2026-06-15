@@ -5,7 +5,7 @@
 .footer-logo-box{
   width: 100px;
   height: 100px;
-  background-image: url(../../assets/ChatGPT\ Image\ Jun\ 13\,\ 2026\,\ 11_52_01\ AM.png);
+  background-image: url(../../assets/global-logo.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -25,22 +25,7 @@
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   margin-bottom: 20px;
-}
-
-.footer-logo i {
-  font-size: 28px;
-  color: var(--primary);
-}
-
-.footer-logo span {
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.footer-logo span span {
-  color: var(--primary);
 }
 
 .footer-desc {
@@ -141,18 +126,45 @@
 .payment-methods {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   font-size: 14px;
   opacity: 0.7;
+  flex-wrap: wrap;
 }
 
-.payment-methods i {
-  font-size: 28px;
-  opacity: 0.6;
-  transition: var(--transition);
+.payment-methods > span:first-child {
+  white-space: nowrap;
+  margin-right: 4px;
 }
 
-.payment-methods i:hover {
+.payment-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.payment-card i {
+  font-size: 22px;
+  opacity: 0.7;
+  transition: all 0.25s ease;
+  line-height: 1;
+}
+
+.payment-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.payment-card:hover i {
   opacity: 1;
 }
 
@@ -225,5 +237,12 @@
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (min-width: 1600px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.3fr;
+    gap: 60px;
   }
 }

@@ -1,65 +1,68 @@
 .announcement-bar {
-  background: linear-gradient(135deg, var(--primary-dark), #1B5E20);
-  padding: 10px 0;
+  background: #dff5e1;
+  height: 36px;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   position: relative;
-  z-index: 1001;
+  z-index: 1000;
 }
 
-.announcement-container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.announcement-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: white;
-  font-size: 13px;
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.announcement-item i {
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-.announcement-middle {
+.announcement-track-wrapper {
+  flex: 1;
+  overflow: hidden;
   position: relative;
-  padding: 0 20px;
 }
 
-.announcement-middle::before,
-.announcement-middle::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 1px;
-  height: 16px;
-  background: rgba(255,255,255,0.3);
-  transform: translateY(-50%);
+.announcement-track {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  animation: fadeMessage 0.4s ease;
 }
 
-.announcement-middle::before {
-  left: 0;
+.announcement-marquee {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
 }
 
-.announcement-middle::after {
-  right: 0;
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: marqueeScroll 20s linear infinite;
 }
 
-@media (max-width: 768px) {
-  .announcement-middle {
-    display: none;
+.announcement-track:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+.marquee-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2e7d32;
+  letter-spacing: 0.3px;
+  font-family: 'Inter', sans-serif;
+  padding: 0 50px;
+  flex-shrink: 0;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-  .announcement-container {
-    justify-content: center;
+@keyframes fadeMessage {
+  0% {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

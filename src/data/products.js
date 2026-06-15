@@ -14,6 +14,7 @@ export const products = [
     image: pexel(9811631),
     badge: "Bestseller",
     isNew: false,
+    stock: 56,
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ export const products = [
     image: pexel(9811624),
     badge: null,
     isNew: true,
+    stock: 34,
   },
   {
     id: 3,
@@ -40,6 +42,7 @@ export const products = [
     image: pexel(6316682),
     badge: "Sale",
     isNew: false,
+    stock: 78,
   },
   {
     id: 4,
@@ -53,6 +56,7 @@ export const products = [
     image: pexel(1799307),
     badge: null,
     isNew: true,
+    stock: 12,
   },
   {
     id: 5,
@@ -66,6 +70,7 @@ export const products = [
     image: pexel(6085951),
     badge: "Bestseller",
     isNew: false,
+    stock: 92,
   },
   {
     id: 6,
@@ -79,6 +84,7 @@ export const products = [
     image: pexel(2291592),
     badge: null,
     isNew: false,
+    stock: 45,
   },
   {
     id: 7,
@@ -92,6 +98,7 @@ export const products = [
     image: pexel(11350074),
     badge: "Premium",
     isNew: true,
+    stock: 23,
   },
   {
     id: 8,
@@ -105,6 +112,7 @@ export const products = [
     image: pexel(4198035),
     badge: null,
     isNew: false,
+    stock: 110,
   },
   {
     id: 9,
@@ -118,6 +126,7 @@ export const products = [
     image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=400&fit=crop",
     badge: "Bestseller",
     isNew: false,
+    stock: 38,
   },
   {
     id: 10,
@@ -131,6 +140,7 @@ export const products = [
     image: pexel(1417943),
     badge: null,
     isNew: true,
+    stock: 67,
   },
   {
     id: 11,
@@ -144,6 +154,7 @@ export const products = [
     image: pexel(6803749),
     badge: "Sale",
     isNew: false,
+    stock: 85,
   },
   {
     id: 12,
@@ -157,6 +168,7 @@ export const products = [
     image: pexel(18876240),
     badge: null,
     isNew: false,
+    stock: 41,
   },
   {
     id: 13,
@@ -170,6 +182,7 @@ export const products = [
     image: pexel(4663476),
     badge: "Premium",
     isNew: false,
+    stock: 19,
   },
   {
     id: 14,
@@ -183,6 +196,7 @@ export const products = [
     image: pexel(6155340),
     badge: null,
     isNew: false,
+    stock: 73,
   },
   {
     id: 15,
@@ -196,6 +210,7 @@ export const products = [
     image: pexel(18876242),
     badge: "New",
     isNew: true,
+    stock: 55,
   },
   {
     id: 16,
@@ -209,6 +224,7 @@ export const products = [
     image: pexel(6803749),
     badge: null,
     isNew: false,
+    stock: 62,
   },
 ];
 
@@ -279,6 +295,8 @@ export const comboPacks = [
     discount: 29,
     image: pexel(11350074),
     rating: 4.8,
+    reviews: 876,
+    stock: 45,
   },
   {
     id: 202,
@@ -289,6 +307,8 @@ export const comboPacks = [
     discount: 30,
     image: pexel(9811631),
     rating: 4.9,
+    reviews: 654,
+    stock: 28,
   },
   {
     id: 203,
@@ -299,6 +319,8 @@ export const comboPacks = [
     discount: 32,
     image: pexel(4198035),
     rating: 4.7,
+    reviews: 543,
+    stock: 60,
   },
   {
     id: 204,
@@ -309,6 +331,8 @@ export const comboPacks = [
     discount: 28,
     image: pexel(1799307),
     rating: 4.9,
+    reviews: 432,
+    stock: 15,
   },
 ];
 
