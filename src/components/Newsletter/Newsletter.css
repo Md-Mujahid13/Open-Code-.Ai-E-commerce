@@ -1,5 +1,5 @@
 .newsletter {
-  background: linear-gradient(135deg, var(--primary-dark), #1B5E20);
+  background: linear-gradient(135deg, #F5F1E6 0%, #E8DDD0 30%, #C8A45D 65%, #6B4F3B 100%);
   padding: 80px 0;
   position: relative;
   overflow: hidden;
@@ -9,8 +9,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(255,255,255,0.03) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(200, 164, 93, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(107, 79, 59, 0.04) 0%, transparent 50%);
   z-index: 0;
 }
 
@@ -18,7 +18,7 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  color: white;
+  color: var(--text-dark);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -27,7 +27,7 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(107, 79, 59, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,6 +36,7 @@
 
 .newsletter-icon i {
   font-size: 30px;
+  color: var(--primary);
 }
 
 .newsletter-content h2 {
@@ -46,7 +47,7 @@
 
 .newsletter-content p {
   font-size: 15px;
-  opacity: 0.85;
+  color: var(--text-gray);
   margin-bottom: 32px;
   line-height: 1.7;
 }
@@ -87,12 +88,12 @@
 }
 
 .newsletter-btn:hover {
-  background: #111827;
+  background: #2A1A0E;
 }
 
 .newsletter-note {
   font-size: 12px;
-  opacity: 0.6;
+  color: var(--text-light);
 }
 
 @media (max-width: 576px) {

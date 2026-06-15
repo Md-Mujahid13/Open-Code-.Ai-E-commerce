@@ -11,52 +11,12 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.88) 25%, rgba(255,255,255,0.65) 45%, rgba(255,255,255,0.2) 65%, rgba(255,255,255,0) 80%),
-    linear-gradient(135deg, rgba(76, 175, 80, 0.06), rgba(46, 125, 50, 0.04));
+    linear-gradient(to right, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.15) 70%, rgba(255,255,255,0) 100%),
+    linear-gradient(135deg, rgba(200, 164, 93, 0.06), rgba(107, 79, 59, 0.04)),
+    url('../../assets/logoback.png');
+  background-size: cover;
+  background-position: center 35%;
   z-index: 0;
-}
-
-.hero-bg-slide {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left 100%;
-  transition: opacity 1s ease;
-
-}
-
-.hero-bg-dots {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 2;
-}
-
-.hero-bg-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  padding: 0;
-  transition: all 0.3s ease;
-}
-
-.hero-bg-dot.active {
-  width: 28px;
-  border-radius: 5px;
-  background: var(--primary);
-}
-
-.hero-bg-dot:hover {
-  background: var(--primary);
 }
 
 .hero-container {
@@ -195,7 +155,7 @@
   animation: float 4s ease-in-out infinite;
   position: relative;
   z-index: 1;
-  box-shadow: 0 20px 60px rgba(76, 175, 80, 0.25);
+  box-shadow: 0 20px 60px rgba(200, 164, 93, 0.25);
   border: 4px solid white;
 }
 
@@ -332,62 +292,5 @@
 
   .hero-decor-circle {
     display: none;
-  }
-
-  .hero-bg-dots {
-    bottom: 18px;
-    gap: 8px;
-  }
-
-  .hero-bg-dot {
-    width: 8px;
-    height: 8px;
-  }
-
-  .hero-bg-dot.active {
-    width: 20px;
-  }
-}
-
-@media (min-width: 350px) and (max-width: 767px) {
-  .hero-bg-slide {
-    object-position: center;
-  }
-
-  .hero-bg {
-    background:
-      linear-gradient(to top, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.88) 30%, rgba(255,255,255,0.65) 55%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0) 100%),
-      linear-gradient(135deg, rgba(76, 175, 80, 0.06), rgba(46, 125, 50, 0.04));
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 100px 0 40px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .hero-container {
-    max-width: 1560px;
-    padding: 0 40px;
-  }
-
-  .hero-title {
-    font-size: 60px;
-  }
-
-  .hero-image-main {
-    width: 500px;
-    height: 500px;
-  }
-
-  .hero-img {
-    width: 450px;
-    height: 450px;
-  }
-
-  .hero-decor-circle {
-    width: 580px;
-    height: 580px;
   }
 }

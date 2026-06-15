@@ -1,3 +1,17 @@
+import card1 from "../assets/card5.jpg"
+import card2 from "../assets/almond.jpg"
+import card3 from "../assets/dates.jpg"
+import card4 from "../assets/honey.jpg"
+import card5 from "../assets/raisins.jpg"
+import card6 from "../assets/dryfruits-gift-box.jpg"
+import card7 from "../assets/mixed-seeds.jpg"
+import card8 from "../assets/primium-gift-hamper.jpg"
+import card9 from "../assets/royal-dry-fruits-box.png"
+import card10 from "../assets/mixeed-nuts.jpg"
+import card11 from "../assets/honey-nuts.jpg"
+import card12 from "../assets/healt-star-pack.png"
+import card13 from "../assets/walnuts.jpg"
+import card14 from "../assets/green-pista.jpg"
 const pexel = (id) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop`;
 
@@ -11,7 +25,7 @@ export const products = [
     discount: 25,
     rating: 4.8,
     reviews: 2456,
-    image: pexel(9811631),
+    image: card2,
     badge: "Bestseller",
     isNew: false,
     stock: 56,
@@ -25,7 +39,7 @@ export const products = [
     discount: 27,
     rating: 4.7,
     reviews: 1876,
-    image: pexel(9811624),
+    image: card10,
     badge: null,
     isNew: true,
     stock: 34,
@@ -39,7 +53,7 @@ export const products = [
     discount: 22,
     rating: 4.6,
     reviews: 1234,
-    image: pexel(6316682),
+    image: card13,
     badge: "Sale",
     isNew: false,
     stock: 78,
@@ -53,7 +67,7 @@ export const products = [
     discount: 24,
     rating: 4.9,
     reviews: 3102,
-    image: pexel(1799307),
+    image: card14,
     badge: null,
     isNew: true,
     stock: 12,
@@ -67,7 +81,7 @@ export const products = [
     discount: 25,
     rating: 4.5,
     reviews: 987,
-    image: pexel(6085951),
+    image: card5,
     badge: "Bestseller",
     isNew: false,
     stock: 92,
@@ -81,7 +95,7 @@ export const products = [
     discount: 25,
     rating: 4.8,
     reviews: 2156,
-    image: pexel(2291592),
+    image: card3,
     badge: null,
     isNew: false,
     stock: 45,
@@ -95,7 +109,7 @@ export const products = [
     discount: 25,
     rating: 4.7,
     reviews: 1654,
-    image: pexel(11350074),
+    image: card7,
     badge: "Premium",
     isNew: true,
     stock: 23,
@@ -109,7 +123,7 @@ export const products = [
     discount: 27,
     rating: 4.4,
     reviews: 876,
-    image: pexel(4198035),
+    image: card8,
     badge: null,
     isNew: false,
     stock: 110,
@@ -123,7 +137,7 @@ export const products = [
     discount: 20,
     rating: 4.9,
     reviews: 3456,
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=400&fit=crop",
+    image: card4,
     badge: "Bestseller",
     isNew: false,
     stock: 38,
@@ -229,14 +243,14 @@ export const products = [
 ];
 
 export const categories = [
-  { name: "Almonds", image: pexel(9811631), count: 12 },
-  { name: "Cashews", image: pexel(9811624), count: 8 },
-  { name: "Walnuts", image: pexel(6316682), count: 6 },
-  { name: "Pistachios", image: pexel(1799307), count: 10 },
-  { name: "Raisins", image: pexel(6085951), count: 5 },
-  { name: "Dates", image: pexel(2291592), count: 7 },
-  { name: "Mixed Nuts", image: pexel(11350074), count: 15 },
-  { name: "Seeds", image: pexel(4198035), count: 9 },
+  { name: "Almonds", image: card1, count: 12 },
+  { name: "Cashews", image: card10, count: 8 },
+  { name: "Walnuts", image: card13, count: 6 },
+  { name: "Pistachios", image: card14, count: 10 },
+  { name: "Raisins", image: card5, count: 5 },
+  { name: "Dates", image: card3, count: 7 },
+  { name: "Mixed Nuts", image:card10, count: 15 },
+  { name: "Seeds", image: card7, count: 9 },
   { name: "Honey", image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=200&h=200&fit=crop", count: 4 },
   { name: "Tea", image: pexel(1417943), count: 6 },
   { name: "Healthy Snacks", image: pexel(6803749), count: 11 },
@@ -250,7 +264,7 @@ export const flashSaleProducts = [
     oldPrice: 2599,
     discount: 38,
     rating: 4.9,
-    image: pexel(9811631),
+    image: card2,
     stock: 24,
   },
   {
@@ -260,7 +274,7 @@ export const flashSaleProducts = [
     oldPrice: 2999,
     discount: 37,
     rating: 4.8,
-    image: pexel(9811624),
+    image: card10,
     stock: 18,
   },
   {
@@ -270,7 +284,7 @@ export const flashSaleProducts = [
     oldPrice: 3999,
     discount: 38,
     rating: 4.9,
-    image: pexel(11350074),
+    image: card6,
     stock: 12,
   },
   {
@@ -280,7 +294,7 @@ export const flashSaleProducts = [
     oldPrice: 2199,
     discount: 41,
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=400&fit=crop",
+    image: card11,
     stock: 30,
   },
 ];
@@ -293,7 +307,7 @@ export const comboPacks = [
     price: 2499,
     oldPrice: 3499,
     discount: 29,
-    image: pexel(11350074),
+    image: card10,
     rating: 4.8,
     reviews: 876,
     stock: 45,
@@ -305,7 +319,7 @@ export const comboPacks = [
     price: 3499,
     oldPrice: 4999,
     discount: 30,
-    image: pexel(9811631),
+    image: card8,
     rating: 4.9,
     reviews: 654,
     stock: 28,
@@ -317,7 +331,7 @@ export const comboPacks = [
     price: 1499,
     oldPrice: 2199,
     discount: 32,
-    image: pexel(4198035),
+    image: card12,
     rating: 4.7,
     reviews: 543,
     stock: 60,
@@ -329,7 +343,7 @@ export const comboPacks = [
     price: 4299,
     oldPrice: 5999,
     discount: 28,
-    image: pexel(1799307),
+    image: card9,
     rating: 4.9,
     reviews: 432,
     stock: 15,

@@ -27,7 +27,7 @@ const useScrollReveal = (threshold = 0.15) => {
 
 const gradients = [
   "linear-gradient(135deg, #1a1a2e, #16213e)",
-  "linear-gradient(135deg, #2E7D32, #4CAF50)",
+  "linear-gradient(135deg, #6B4F3B, #C8A45D)",
   "linear-gradient(135deg, #F59E0B, #F97316)",
   "linear-gradient(135deg, #7C3AED, #A78BFA)",
   "linear-gradient(135deg, #DC2626, #EF4444)",

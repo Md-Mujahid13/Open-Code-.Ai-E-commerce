@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary: #4CAF50;
-  --primary-dark: #2E7D32;
-  --primary-light: #E8F5E9;
+  --primary: #C8A45D;
+  --primary-dark: #6B4F3B;
+  --primary-light: #F5EDDF;
   --bg-white: #FFFFFF;
-  --bg-soft: #F8FFF4;
-  --text-dark: #1F2937;
-  --text-gray: #6B7280;
-  --text-light: #9CA3AF;
-  --border: #E5E7EB;
-  --border-light: #F3F4F6;
+  --bg-soft: #FDFBF7;
+  --text-dark: #3C2A1D;
+  --text-gray: #8B7D6B;
+  --text-light: #B5A795;
+  --border: #E8DDD0;
+  --border-light: #F3EDE4;
   --danger: #EF4444;
   --warning: #F59E0B;
   --success: #10B981;
@@ -120,7 +120,7 @@ ul {
 .btn-primary:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.35);
+  box-shadow: 0 8px 25px rgba(200, 164, 93, 0.35);
 }
 
 .btn-outline {

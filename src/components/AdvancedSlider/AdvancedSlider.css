@@ -230,7 +230,7 @@
 .slider-nav:hover {
   background: var(--primary);
   color: white;
-  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.35);
+  box-shadow: 0 8px 25px rgba(200, 164, 93, 0.35);
 }
 
 .slider-prev {

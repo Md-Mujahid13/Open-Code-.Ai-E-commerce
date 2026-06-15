@@ -1,5 +1,5 @@
 .announcement-bar {
-  background: #dff5e1;
+  background: #F5EDDF;
   height: 36px;
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@
 .marquee-text {
   font-size: 13px;
   font-weight: 500;
-  color: #2e7d32;
+  color: #6B4F3B;
   letter-spacing: 0.3px;
   font-family: 'Inter', sans-serif;
   padding: 0 50px;

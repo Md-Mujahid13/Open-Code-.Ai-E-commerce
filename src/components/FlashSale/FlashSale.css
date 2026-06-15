@@ -108,7 +108,7 @@
 .flash-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
-  border-color: rgba(76, 175, 80, 0.3);
+  border-color: rgba(200, 164, 93, 0.3);
 }
 
 .flash-card-image {

@@ -287,13 +287,13 @@
   transition: all 0.3s ease;
   font-family: var(--font);
   white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.25);
+  box-shadow: 0 4px 12px rgba(200, 164, 93, 0.25);
 }
 
 .add-to-cart-btn:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.35);
+  box-shadow: 0 6px 20px rgba(200, 164, 93, 0.35);
 }
 
 .add-to-cart-btn:active {
